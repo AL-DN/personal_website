@@ -68,6 +68,37 @@ body {
   }
 }
 
+.navbar {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Center navbar horizontally */
+}
+
+.navitems {
+  display: flex; /* Enables Flexbox */
+  justify-content: space-around; /* Distribute buttons evenly */
+  align-items: center; /* Center buttons vertically */
+  background-color: #333; /* Optional: Set a background color */
+  padding: 8px; /* Optional: Add some padding */
+  border-radius: 20px;
+  width: 700px;
+}
+
+/********************* NAV BUTTON STYLES ***********************/
+
+.navbtn {
+  display: flex; /* Enables Flexbox */
+  background-color: rgb(133, 147, 160);
+  border-radius: 5px;
+  padding: 3px;
+  padding-inline: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    border-radius 0.3s ease; /* Smooth transition */
+}
+
+.navbtn:hover {
+  transform: scale(1.1); /* Scale the button by 10% */
+}
+
 @layer base {
   * {
     @apply border-border;

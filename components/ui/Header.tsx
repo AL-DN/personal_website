@@ -1,21 +1,35 @@
 import React from "react";
-import Link from "next/link";
+import NavButton from "./NavButton";
 
 const Header = () => {
   return (
-    <div>
-      <Link className="px-3" href="/profile">
-        Profile
-      </Link>
-
-      <Link className="px-3" href="/projects">
-        Projects
-      </Link>
-
-      <Link className="px-3" href="/gallery">
-        Gallery
-      </Link>
-    </div>
+    <>
+      <div className="navbar">
+        <div className="navitems">
+          <NavButton
+            label="Profile"
+            link="/profile"
+            iconURL="/icons/icons8-male-user.gif"
+            iconW={30}
+            iconH={30}
+          />
+          <NavButton
+            label="Projects"
+            link="/projects"
+            iconURL="/icons/icons8-male-user.svg"
+            iconW={30}
+            iconH={30}
+          />
+          <NavButton
+            label="Gallery"
+            link="/gallery"
+            iconURL="/icons/icons8-male-user.svg"
+            iconW={30}
+            iconH={30}
+          />
+        </div>
+      </div>
+    </>
   );
 };
 
