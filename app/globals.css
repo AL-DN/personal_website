@@ -14,6 +14,13 @@ body {
 
 @layer base {
   :root {
+    /* COLOR PALETTE*/
+    --rasin-black: #272727;
+    --buff: #d4aa7d;
+    --sunset: #efd09e;
+    --g-beige: #d2d8b3;
+    --cadet-grey: #90a9b7;
+    /*-------------------------------*/
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -40,63 +47,51 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
+}
+
+.background {
+  background-color: var(--rasin-black);
 }
 
 .navbar {
   display: flex; /* Enables Flexbox */
   justify-content: center; /* Center navbar horizontally */
+  padding-top: 12px;
 }
 
 .navitems {
   display: flex; /* Enables Flexbox */
   justify-content: space-around; /* Distribute buttons evenly */
   align-items: center; /* Center buttons vertically */
-  background-color: #333; /* Optional: Set a background color */
+  background-color: var(--buff); /* Optional: Set a background color */
   padding: 8px; /* Optional: Add some padding */
   border-radius: 20px;
   width: 700px;
+  box-shadow: 5px 5px 15px 10px rgba(0, 0, 0, 0.3); /* Slightly spread shadow with black color */
 }
 
 /********************* NAV BUTTON STYLES ***********************/
 
 .navbtn {
   display: flex; /* Enables Flexbox */
-  background-color: rgb(133, 147, 160);
   border-radius: 5px;
   padding: 3px;
   padding-inline: 8px;
-  transition: transform 0.3s ease, background-color 0.3s ease,
-    border-radius 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .navbtn:hover {
   transform: scale(1.1); /* Scale the button by 10% */
+}
+
+/************** GALLERY STYLES *******************/
+.heading {
+  font-size: 32px;
+}
+
+.image {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 @layer base {
